@@ -1,12 +1,12 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    password: abcd1234
-    url: jdbc:mariadb://database-1.ck2evpdvq4re.ap-northeast-2.rds.amazonaws.com:3306/project2
-    username: nowon
+    password: 비밀번호
+    url: jdbc:mariadb://RDS주소:3306/project2
+    username: 아이디
   mail:
     host: smtp.gmail.com
-    password: edzgnfigclvcrcam
+    password: 메일비밀번호
     username: ddogi94@gmail.com
     port: 465
     properties:
@@ -32,4 +32,4 @@ mybatis:
     map-underscore-to-camel-case: true
 
 gpt:
-  key: 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
+  key: GPT 키
