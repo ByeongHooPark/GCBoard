@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+main > .wrap,
+#argue-area > .wrap,
+#gpt-area > .wrap,
+#bottom-area > .wrap{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-btn-wrap{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.top-btn a,
+.comment-btn-wrap a {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.top-btn a:hover {
+  background-color: #2980b9;
+}
+
+section{
+	margin-bottom: 50px;
+}
+
+#argue-area .argue-title{
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#argue-area .argue-small-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding-left: 20px;
+}
+
+#argue-area .argue-resean{
+	margin-top: 50px;
+}
+
+#argue-area .argue-resean label,
+#gpt-area .gpt-evaluation label{
+	display: block;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#argue-area .argue-resean span,
+#gpt-area .gpt-evaluation span{
+	display: inline-block;
+	height: 100px;
+	line-height: 1.5;
+}
+
+#gpt-area .gpt-score {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 55px;
+}
+
+#bottom-area .comment-btn-wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.comment-argreement-btn a{background-color: green;}
+.comment-opposition-btn a{background-color: red;}
+.comment-neutrality-btn a{background-color: gray;}
+
+
+.temp{margin-right: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

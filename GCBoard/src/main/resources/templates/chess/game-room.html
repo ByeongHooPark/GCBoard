@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+		<!-- default header name is X-CSRF-TOKEN -->
+		<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+   		<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+        <script type="text/javascript" src="/js/chess/game-room.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/chess/game-room.css">
+    </head>
+    <body>
+    	<main>
+			<div class="board-frame">
+				<div class="game-board">
+				<!-- js로 체스판 태그가 들어와요 -->
+				<!-- class명 : 'row' 'chess-square' -->
+				</div>
+				<div class="board-util">
+				<!-- 임시 팝업? 같은 알림이 뜨는 곳 -->
+					<div class="util-wrap">
+						<div class="welcome-popup">
+							<p class="popup-title-wrap">
+								<span>닉네임을 생성하시면 방에 참여됩니다</span>
+							</p>
+							<p class="btn-wrap">
+								<button onclick="connect()">랜덤닉네임생성</button>
+							</p>
+						</div>
+						<div class="select-player">
+							<p class="popup-title-wrap">
+								<span>플레이어가 정해지면 게임이 시작됩니다</span>
+							</p>
+							<div>
+								<p class="btn-wrap">
+									<button id="select-white" onclick="playerSelect('white')">백 선택</button>
+								</p>
+								<p class="btn-wrap">
+									<button id="select-black" onclick="playerSelect('black')">흑 선택</button>
+								</p>
+							</div>
+						</div>
+						<div class="game-set">
+							<p class="popup-title-wrap">
+								<!-- 무승부가 올 수 있으므로, 문장 자체를 보낸다 -->
+								<span class="game-set-title">임시임시임시임시임시임시임시</span>
+								<span class="result-reason">
+									<span>사유 : </span>
+									<span class="reason-sentence"></span>
+								</span>
+							</p>
+							<div>
+								<p class="btn-wrap">
+									<button id="reset-game" onclick="gameFin()">다음게임으로</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>    		
+			<div class="side-menu-background">
+				<div class="side-menu-wrap">
+					<!-- 1.타이틀 메뉴 -->
+					<div class="title-wrap">
+						<p>
+							<input id="crno-input" type="hidden" th:value="${dto.crno}">
+							<span id="title-span" th:text="${dto.title}">$방제목이 들어옵니다</span>
+						</p>
+					</div>
+					<!-- 2. 게임상태 메뉴 -->
+					<div class="game-state-wrap">
+						<div class="state-wrap">
+							<span>게임상태 : </span>
+							<span class="state" th:text="${dto.state}">$게임상태</span>
+						</div>
+						<div>
+							<p class="user-nick-temp">
+								<span>참여자 닉네임</span>
+							</p>
+							<p>
+								<span>백 : </span>
+								<span class="white-nick" th:text="${dto.whiteNick}">$백 참여자 닉네임</span>
+							</p>
+							<p>
+								<span>흑 : </span>
+								<span class="black-nick" th:text="${dto.blackNick}">$흑 참여자 닉네임</span>
+							</p>
+						</div>
+						<div class="btn-wrap">
+							<button id="back-btn" type="button">한 수 무르기</button>
+						</div>
+					</div>
+					<!-- 3. 유저 현황 메뉴 -->
+					<div class="user-wrap">
+						<div>
+							<span>나 :</span>
+							<span class="my-nick"></span>
+						</div>
+						<div class="out-wrap">
+							<div class="btn-wrap">
+								<button id="byebye" type="button" onclick="byebye()">나가기</button>
+							</div>
+						</div>
+						<div class="user-info-wrap">
+							<div class="user-span-wrap">
+								<p>
+									<span>참여자목록</span>					
+								</p>
+								<p>
+									<span class="count" th:text="${dto.count}">$100</span>
+									<span>명</span>						
+								</p>
+							</div>
+							<div class="user-list-wrap">
+							<!-- 유저 리스트가 들어옴니다 -->
+							</div>
+						</div>
+					</div>
+					<!-- 4. 채팅메뉴 -->
+					<div class="chat-wrap">
+						<div class="chat-board">
+							<!-- $채팅, 알림내역이 올라오는곳 -->
+							
+						</div>
+						<form class="chat-btn-wrap">
+							<input id="chat-input" type="text">
+							<button id="chat-btn" onclick="sendMassage()">전송</button>
+						</form>
+					</div>
+				</div>
+			</div>    		
+    	</main>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

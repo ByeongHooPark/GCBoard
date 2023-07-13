@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: abcd1234
+    url: jdbc:mariadb://database-1.ck2evpdvq4re.ap-northeast-2.rds.amazonaws.com:3306/project2
+    username: nowon
+  mail:
+    host: smtp.gmail.com
+    password: edzgnfigclvcrcam
+    username: ddogi94@gmail.com
+    port: 465
+    properties:
+      mail:
+        smpt:
+          auth: true
+        smtp:
+          ssl:
+            enable: true
+    
+  jpa:
+    generate-ddl: true
+    open-in-view: false
+    show-sql: true
+
+  data:
+   redis:
+    host: 13.209.229.66
+    port: 6379
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+gpt:
+  key: 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

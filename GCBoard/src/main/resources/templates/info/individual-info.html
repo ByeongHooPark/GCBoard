@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/info/individual-info.css">
+    </head>
+    <body>
+        <main>
+        	<h1>개인정보 페이지</h1>
+        	<div class="wrap">
+				<section id="top-area">
+					<h1>상단 영역</h1>
+					<div class="wrap">
+						<p class="title-wrap">
+							<span>개인 정보</span>
+						</p>
+					</div>
+				</section>
+				<section id="info-area">
+					<h1>정보 영역</h1>
+					<div class="wrap">
+						<div class="info-wrap">
+							<p class="userId">
+								<span>아이디 : </span>
+								<span th:text="${dto.userId}"></span>
+							</p>
+							<p class="score">
+								<span>평균점수 :</span>
+								<span th:text="${dto.score}"></span>
+							</p>
+							<p class="count">
+								<span>참여횟수 :</span>
+								<span th:text="${dto.count}"></span>
+							</p>
+						</div>
+						<div class="tier-wrap">
+							<div>
+								<p class="bronze" sec:authorize="hasRole('BRONZE')">
+									<span>죽는 날까지 하늘을 우러러</span>
+									<span>한 점 부끄럼이 없기를,</span>
+									<br>
+								</p>
+								<p class="silver" sec:authorize="hasRole('SILVER')">
+									<span>잎새에 이는 바람에도</span>
+									<span>나는 괴로워했다.</span>
+									<br>
+								</p>
+								<p class="gold" sec:authorize="hasRole('GOLD')">
+									<span>별을 노래하는 마음으로</span>
+									<span>모든 죽어 가는 것을 사랑해야지</span>
+									<br>
+								</p>
+								<p class="platinum" sec:authorize="hasRole('PLATINUM')">
+									<span>그리고 나한테 주어진 길을</span>
+									<span>걸어가야겠다.</span>
+									<br>
+								</p>
+								<p class="diamond" sec:authorize="hasRole('DIAMOND')">
+									<span>오늘 밤에도 별이 바람에 스치운다.</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+        	</div>
+        </main>
+    </body>
+</html>

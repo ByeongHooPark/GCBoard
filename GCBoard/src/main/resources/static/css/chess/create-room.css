@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.create-wrap {
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	width: 600px;
+	height: 264px;
+	margin: 100px auto;
+	padding: 100px 0;
+}
+
+.create-wrap p, #title {
+	font-size: 55px;
+}
+
+.create-wrap p{
+	margin-bottom: 100px;
+}
+
+#title {
+	width: 480px;
+	display: block;
+	margin: 0 auto;
+}
+
+.create-wrap button {
+	display: inline-block;
+	padding: 16px 58px;
+	background-color: #3498db;
+	color: #fff;
+	text-decoration: none;
+	font-size: 50px;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+}

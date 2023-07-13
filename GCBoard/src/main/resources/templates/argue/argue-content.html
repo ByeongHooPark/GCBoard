@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/argue/argue-content.css">
+ 		<script type="text/javascript" src="/js/argue-content.js"></script>
+    </head>
+    <body>
+        <main>
+        	<h1>토론내용페이지</h1>
+        	<div class="wrap">
+				<section id="top-area">
+					<h1>상단 영역</h1>
+					<div class="wrap">
+						<p class="title-wrap">
+							<span th:text="${bdto.abno}">토론 주제의 번호</span>.
+							<span class="rigth-span" th:text="${bdto.title}">토론 주제</span>
+						</p>
+						<div class="nick-wrap">
+							<p th:if="${bdto.nick} == null">
+								<span>나의 닉네임 : </span>
+								<span>닉네임은 글 작성 후에 생성됩니다.</span>
+							</p>			
+							<p th:unless="${bdto.nick} == null">
+								<span>나의 닉네임 : </span>
+								<span th:text="${bdto.nick}"></span>
+							</p>
+						</div>
+						<div>
+							<p class="get-detail">
+								<span th:text="${bdto.detail}"></span>
+							</p>
+						</div>
+						<div class="btn-wrap">
+							<a th:href="|/argue/content/write?abno=${bdto.abno}|">새 의견 제시</a>
+						</div>
+					</div>
+				</section>
+				<section id="argument-area">
+					<h1>주장 영역</h1>
+					<div class="wrap">
+						<ul class="li-wrap">
+							<li class="argue-list" th:each="dto:${clist}">
+								<a class="a-link" th:href="|/argue/conetent/${dto.acno}|">
+									<p class="argue-title">
+										<span th:text="${dto.acno}">주장 번호</span>
+										<span>. </span>
+										<span th:text="${dto.arguments}">주장</span>
+									</p>
+									<div class="small-info-wrap">
+										<div>
+											<p class="argue-writer">
+												<span>작성자 : </span>
+												<span th:text="${dto.nick}">닉네임</span>
+											</p>
+											<p class="argue-parent" th:if="${dto.pno} == null">
+												<span>상위 주장이 없습니다</span>
+											</p>
+											<p class="argue-parent" th:unless="${dto.pno} == null">
+										 		<span th:text="${dto.pno}">comment 대상 주장</span>
+										 		<span>번 주장에 대한 </span>
+										 		<span th:text="${dto.type}">comment type</span>
+										 		<span>의견입니다.</span>
+											</p>
+											<p class="argue-score">
+												<span>점수 : </span>
+												<span th:text="${dto.gptScore}">gpt점수</span>점
+											</p>
+										</div>
+										<div class="comment-wrap">
+											<span class="agree" th:text="${dto.agree}">찬성한 주장의 수</span>
+											<span class="opposite" th:text="${dto.opposite}">반대한 주장의 수</span>
+											<span class="neutrality" th:text="${dto.neutrality}">중립인 주장의 수</span>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+        	</div>
+        </main>
+    </body>
+</html>

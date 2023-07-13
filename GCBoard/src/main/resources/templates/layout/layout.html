@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="//www.thymeleaf.org/extras/spring-security"
+      th:fragment="basic(head, main)">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/common.css">
+        <link rel="stylesheet" type="text/css" href="/css/header.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <title>GCBoard</title>
+         <th:block th:replace="${head}" />
+    </head>
+    <body class="view-size">
+        <th:block th:replace="~{/layout/header}" />
+        <th:block th:replace="${main}" />
+    </body>
+</html>

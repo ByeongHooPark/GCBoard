@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/argue/gpt-scoring.css">
+    </head>
+    <body>
+        <main>
+        	<h1>gpt채점페이지</h1>
+        	<div class="wrap">
+        		<div class="title-wrap">
+        			<span>평가 결과</span>
+        		</div>
+				<div class="info-wrap">
+					<p>
+						<span>점수 : </span>
+						<span th:text="${dto.gptScore}"></span>
+					</p>
+					<p>
+						<span>평가 : </span>
+						<span th:text="${dto.gptEval}"></span>
+					</p>
+				</div>
+				<div class="aTag-wrap">
+					<a href="/argue">토론 메인으로 가기</a>
+					<a th:href="|/argue/conetent/${dto.acno}|">게시글로 가기</a>
+				</div>
+        	</div>
+        </main>
+    </body>
+</html>

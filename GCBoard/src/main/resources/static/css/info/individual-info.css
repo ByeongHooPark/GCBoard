@@ -1,0 +1,99 @@
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+
+main .wrap {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+
+.title-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.title-wrap span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-wrap p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.info-wrap span {
+  font-weight: bold;
+}
+
+.tier-wrap {
+	display: flex;
+	justify-content: center;
+	
+}
+
+.tier-wrap > div{
+	width: 250px;
+	height: 300px;
+	padding: 30px;
+	border-radius: 30px;
+	background-color: #ECF6CE;
+}
+
+.tier-wrap p {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.tier-wrap span {
+  display: block;
+  font-size: 16px;
+}
+
+.info-wrap span {
+  font-weight: bold;
+}
+
+.bronze{
+	color: #DBA901;
+}
+
+.silver{
+	color: #A4A4A4;
+}
+
+.gold{
+	color: #AEB404;
+}
+
+.platinum{
+	color: #01DFD7;
+}
+
+.diamond{
+	color: #58ACFA;
+}
+
+
+
+
+
+
+
+
+
+
+

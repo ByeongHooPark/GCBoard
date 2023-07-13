@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+header>.wrap{
+	margin: 20px;
+}
+
+.logo-wrap{
+	width: 30%;
+}
+
+.logo-wrap>.logo{
+	font-size: 50px;
+}
+
+.menu-wrap{
+	width: 70%;
+	justify-content: flex-end;
+}
+
+.link-wrap{
+	display: flex;
+	align-items: flex-end;
+	margin-left: 10px;
+}
+
+.link-wrap>a, .btn-signout{
+	font-size: 20px;
+}
+
+body{
+	background-color: #fcfcfc;
+}
+
+#G{
+	color: #3498db;
+}
+
+#C{
+	color: #27ae60;
+}
+
+#G, #C, #GCB {
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

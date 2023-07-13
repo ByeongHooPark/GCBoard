@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/argue/create-content.css">
+    </head>
+    <body>
+    	<main>
+    		<h1>주장 등록 페이지</h1>
+    		<div class="wrap">
+    			<div class="title-wrap">
+    				<span>의견 등록</span>
+    			</div>
+		        <form action="/argue/content/write" method="post">
+	<!-- ****** name ****** -->
+		        	<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+		        	<input type="hidden" name="abno" th:value="${dto.abno}">
+		        	
+		            <p th:if="${dto.nick}!=null">
+		                <label>닉네임</label>
+	<!-- ****** name ****** -->
+		                <input type="text" readonly="readonly" name="nick" th:value="${dto.nick}">
+		            </p>
+		            <p th:if="${dto.nick}==null">
+		                <label>닉네임</label>
+		                <input type="text" readonly="readonly" value="닉네임은 글 작성 후에 생성됩니다.">
+		            </p>
+		
+		            <div th:if="${dto.parent}!=null">
+		                <p>
+		                    <label>comment 유형</label>
+		                    <span th:text="${dto.parent}">대상 번호</span>
+		                    <span>번 주장에 대한</span>
+		                    <span th:text="${dto.type}">유형</span>
+		                    <span>의견</span>
+		                </p>
+		                <div>
+		                    <p>
+		                        <label>상위 주장</label>
+		                        <span th:text="${dto.parentArguments}">주장의 내용</span>
+		                    </p>
+		                    <p>
+		                        <label>상위 논거</label>
+		                        <span th:text="${dto.parentReasons}">논거의 내용</span>
+		                    </p>
+		                </div>
+	<!-- ****** name ****** -->
+		                <input type="hidden" name="parent" th:value="${dto.parent}">
+		                <input type="hidden" name="type" th:value="${dto.type}">
+		                <input type="hidden" name="pastArgument" th:value="${dto.parentArguments}">
+		                <input type="hidden" name="pastReason" th:value="${dto.parentReasons}">
+		            </div>
+		
+		            <div th:if="${dto.parent}==null">
+		                <p>
+		                    <label>comment 유형</label>
+		                    <span>상위 주장이 없습니다.</span>
+		                </p>
+		            </div>
+	<!-- ****** name ****** -->
+		            <p>
+		                <label for="arguments">주장</label>
+		                <textarea id="presentArgument" name="presentArgument" rows="3" cols="80" placeholder="주장을 입력해주세요"></textarea>
+		            </p>
+		            <p>
+		                <label for="reason">논거</label>
+		                <textarea id="presentReason" name="presentReason" rows="7" cols="80" placeholder="논거를 입력해주세요"></textarea>
+		            </p>
+		
+		            <div class="btn-wrap">
+		                <button type="submit">등록하기</button>
+		            </div>
+		            
+		        </form>
+	        </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/argue/argue-main.css">
+    </head>
+    <body>
+        <main class="view-size">
+        	<h1>토론게시판메인페이지</h1>
+        	<div class="wrap">
+				<section id="title-btn">
+					<h1>타이틀 & 새 토론 버튼 영역</h1>
+					<div class="wrap">
+						<p class="title-wrap">
+							<span>토론게시판-메인</span>
+						</p> 
+						<div class="new-btn-wrap">
+							<a href="/argue/new-subject/0">새 토론 주제 만들기</a>
+						</div>
+					</div>
+				</section>
+				<section id="main-argue">
+					<h1>토론 메인 주제 영역</h1>
+					<div class="wrap">
+						<ul id="argue-wrap">
+							<li th:each="dto:${list}" class="argue-list">
+								<p class="argue-title-wrap">
+									<span th:text="${dto.title}">토론 제목</span>
+								</p>
+								<div class="date-btn-wrap">
+									<p>
+										생성일: <span th:text="${dto.createdDate}">생성일</span>
+									</p>
+									<div class="btn-wrap">
+										<p>
+											<a th:href="|/argue/board/${dto.abno}|">토론 방으로</a>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+        	</div>
+        </main>
+    </body>
+</html>

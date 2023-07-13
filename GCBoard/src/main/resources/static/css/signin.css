@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* signin.css */
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wrap {
+  margin-top: 30px;
+}
+
+.title-wrap {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-wrap span{
+	font-size: 30px; 
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}

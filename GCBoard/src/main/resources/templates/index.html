@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+        <script type="text/javascript" src="/js/index.js"></script>
+        <title>Insert title here</title>
+    </head>
+    <body>
+        <main>
+        	<h1>인덱스 페이지입니다</h1>
+        	<div class="big-wrap">
+				<a href="/argue" class="left-square">
+					<span class="big-G">G</span>
+					<span class="G-hover-span">
+						<span>GPT 토론 게시판</span>
+						<br>
+						<span class="need-sign" sec:authorize ="isAnonymous()">로그인 필요</span>
+					</span>
+				</a>  	
+				<a href="/chess/main" class="right-square">
+					<span class="big-C">C</span>
+					<span class="C-hover-span">
+						<span>체스 게시판</span>
+					</span>
+				</a>        	
+        	</div>
+        </main>
+    </body>
+</html>

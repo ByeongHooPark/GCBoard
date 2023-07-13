@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+         <meta name="_csrf" th:content="${_csrf.token}"/>
+		<!-- default header name is X-CSRF-TOKEN -->
+		<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+        <script type="text/javascript" src="/js/chess/create-room.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/chess/create-room.css">
+        <title>Insert title here</title>
+    </head>
+    <body>
+    	<main>
+	    	<h1>체스 방 생성페이지</h1>
+			<div class="create-wrap">
+				<p>
+					<input id="title" name="title" type="text" placeholder="방 제목을 입력하세요">
+				</p>
+				<form action="/chess/main" method="get">
+					<button type="submit" onclick="createRoom()">만들기</button>
+				</form>
+			</div>
+    	</main>
+    </body>
+</html>

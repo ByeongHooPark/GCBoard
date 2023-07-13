@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/argue/create-subject.css">
+        <script type="text/javascript" src="/js/create-subject.js"></script>
+    </head>
+    <body>
+        <main>
+        	<h1>토론주제작성페이지</h1>
+        	<div class="wrap">
+				<div class="title-wrap">
+					<p>
+						<span>토론 주제 생성</span>
+					</p>
+				</div>
+				<div class="form-wrap">
+					<form action="/argue/new-subject" method="post">
+						<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+						<div>
+							<p class="little-title-wrap">
+								<label for="title">토론 주제</label>
+								<button type="button" class="random-topic" onclick="createRandom()">랜덤 주제 생성</button>
+								<textarea id="title" name="title" rows="3" cols="80" placeholder="토론 주제를 입력해주세요"></textarea>
+							</p>
+							<p>
+								<label for="detail">토론 상세내용</label>
+								<textarea id="detail" name="detail" rows="7" cols="80" placeholder="내용을 입력해주세요"></textarea>
+							</p>
+						</div>
+						<div>
+							<p>
+								<label for="arguements">주장</label>
+								<textarea id="arguements" name="arguements" rows="3" cols="80" placeholder="주장을 입력해주세요"></textarea>
+							</p>
+							<p>
+								<label for="reason">논거</label>
+								<textarea id="reason" name="reason" rows="7" cols="80" placeholder="논거를 입력해주세요"></textarea>
+							</p>
+						</div>
+						
+						<div class="btn-wrap">
+							<button type="submit">만들기</button>
+						</div>
+					</form>
+				</div>
+        	</div>
+        </main>
+    </body>
+</html>

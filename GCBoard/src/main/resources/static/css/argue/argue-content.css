@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+main > .wrap{
+	width: 1000px;
+	margin-top: 100px;
+}
+
+#top-area > .wrap{
+	width: 900px;
+	margin: 0 auto;
+}
+
+
+#top-area .title-wrap{
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+#top-area .title-wrap .rigth-span{
+	margin-left: 10px;
+}
+
+
+#top-area .nick-wrap{
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+
+.btn-wrap{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.get-detail{
+	font-size: 20px;
+	margin: 40px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-wrap a {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn-wrap a:hover {
+  background-color: #2980b9;
+}
+
+#argument-area .li-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+#argument-area .argue-list {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  height: 150px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#argument-area .argue-list:nth-child(odd){
+	margin-right: 20px;
+}
+
+#argument-area .argue-title{
+	font-size: 23px;
+	height: 70px;
+	
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 70px; /* 원하는 최대 너비로 조정하세요 */
+}
+
+.small-info-wrap{
+	display: flex;
+}
+
+.comment-wrap{
+	font-size: 20px;
+	position: absolute;
+	right: 43px;
+	bottom: 33px;
+}
+.agree{color: green;}
+.opposite{color: red;}
+.neutrality{color: gray;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

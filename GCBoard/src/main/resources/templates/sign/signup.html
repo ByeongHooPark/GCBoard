@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="_csrf" th:content="${_csrf.token}"/>
+		<!-- default header name is X-CSRF-TOKEN -->
+		<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+        <title>Insert title here</title>
+        <script type="text/javascript" src="/js/signup.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    </head>
+    <body>
+        <main>
+        	<h1>회원가입</h1>
+        	<div class="wrap">
+        		<div class="title-wrap">
+        			<p>
+        				<span>회원가입</span>
+        			</p>
+        		</div>
+	        	<form id="form-signup" action="/signup" method="post">
+		        	<input id="test" name="authFlag" type="hidden">
+		        	<ul class="li-wrap">
+						<li>
+							<label for="user-id">아이디</label>
+							<input id="user-id" name="userId" placeholder="아이디" maxlength="15">				
+						</li>
+						<li>											
+							<label for="pass">비밀번호</label>
+							<input type="password" id="pass" name="pass" placeholder="비밀번호 (영문, 숫자 조합 10자 이상 입력)" maxlength="15">
+						</li>
+						<li>
+							<label for="pass-check">비밀번호 확인</label>
+							<input type="password" id="pass-check"  placeholder="비밀번호 확인" maxlength="15">
+						</li>        	
+						<li>
+							<div class="auth-wrap">
+								<p>
+									<span>이메일인증(선택, 인증시 더 높은 등급)</span>
+								</p>
+							    <input type="text" id="email" name="email" placeholder="이메일을 입력하세요">
+					        	<button type="button" class="btn-mailsend btn-de">메일 인증</button>
+					        	<button type="button" class="btn-mailsend btn-re">메일 재전송</button>
+					        	<div id="btn-check-wrap">
+						        	<input type="text" id="in-code" placeholder="인증번호를 입력하세요">
+						        	<button type="button" class="btn-check">확인</button>
+					        	</div>
+				        	</div>
+				        	<p class="auth-success">
+				        		<span>인증에 성공하였습니다.</span>
+				        	</p>
+						</li>
+		        	</ul>
+		        	<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+		        	<button  type="submit">회원가입</button>
+	        	</form>
+        	</div>
+        </main>
+    </body>
+</html>

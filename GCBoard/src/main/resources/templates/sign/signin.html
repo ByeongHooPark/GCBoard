@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{/layout/layout.html :: basic(~{this::head}, ~{this::main})}">
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <link rel="stylesheet" type="text/css" href="/css/signin.css">
+    </head>
+    <body>
+        <main>
+        	<h1>로그인페이지</h1>
+        	<div class="wrap">
+        		<div class="title-wrap">
+        			<p>
+        				<span>로그인</span>
+        			</p>
+        		</div>
+        		<form action="/signin" method="post">
+					<p>
+						<input name="userId" placeholder="아이디">
+					</p>
+					<p>
+						<input name="pass" placeholder="비밀번호" type="password">
+					</p>
+					<div>
+						<button>로그인</button>
+					</div>
+					<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        		</form>
+        	</div>
+        </main>
+    </body>
+</html>

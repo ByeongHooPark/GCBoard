@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+
+/** 임시 **/
+/* .welcome-popup{display: none;} */
+.select-player{display: none;}
+.game-set{display: none;}
+.black-lotate{transform: rotate(180deg);}
+	
+/********/
+
+
+p{margin:0;}
+main{width: 1200px; height: 900px; display: flex; position: relative;}
+
+/* 버튼 공통 */
+.btn-wrap {
+  text-align: center;
+}
+
+.btn-wrap button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 1.체스판쪽 */
+/* 1-1.체스판 */
+.board-frame{
+	width: 900px;
+	height: 900px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	background-color: #555;
+}
+	
+.board-frame .game-board{
+	width: 872px;
+	height: 872px;
+}
+
+.row{
+	display: flex;
+}
+
+.row .chess-square{
+	width: 109px;
+	height: 109px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.mint-target{
+ 	background-color: #80FFE3 !important;
+}
+
+/* 1-2. 임시 팝업 */
+/* 처음에는 버튼 전부 비활성화, 나머지는 채팅은 활성화 무르기는 비활성화 */
+.board-util{
+	position: absolute;
+	height: 500px;
+	width: 750px;
+	border-radius: 30px;
+	background-color:  #FFE4B5;
+	box-shadow: 5px 7px 9px #8B4513;
+	border: 1px solid #8B4513;
+}
+/* 맨처음 팝업 */
+.popup-title-wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	margin: 132px 0;
+}
+
+.board-util .welcome-popup .btn-wrap button{
+	    padding: 24px 69px !important;
+	    font-size: 30px;
+}
+
+/* 플레이어 선택 팝업 */
+.select-player > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.select-player .btn-wrap{
+	margin: 0 30px;
+}
+
+.select-player button {
+	font-size: 25px !important;
+}
+
+/* 게임 종료  */
+.game-set > .popup-title-wrap{
+	position: relative;
+}
+
+.result-reason {
+	position: absolute;
+	font-size: 25px;
+	top: 90px;
+}
+
+.game-set .btn-wrap button{
+	padding: 23px 47px;
+	font-size: 22px;
+}
+
+
+/* 2.사이드메뉴쪽 */
+/* 2-0. 사이드 메뉴들 공통 */
+.side-menu-background{
+	width: 300px; 
+	height: 900px;
+	
+	display:flex;
+	justify-content:flex-start;
+	align-items: center;
+	
+	background-color:#555;
+}
+
+.side-menu-background .side-menu-wrap{
+	height: 872px;
+	width: 286px;
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.side-menu-wrap > div{
+	width: 262px;
+	background-color:white;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 0 10px;
+}
+
+/* 2-1. 타이틀 메뉴 */
+.title-wrap{
+	height: 124px;
+}
+
+.title-wrap p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+}
+
+/* 2-2. 게임상태 메뉴 */
+.game-state-wrap{
+	height: 200px;
+}
+
+.game-state-wrap > div {
+	margin-top: 10px;
+}
+.state-wrap{margin-top: 20px !important;}
+.user-nick-temp{margin-bottom: 5px;}
+
+
+/* 2-3. 유저 현황 메뉴 */
+.user-wrap{
+	height: 240px;
+	position: relative;
+}
+
+.user-wrap > div {
+	margin-top: 20px;
+}
+
+.user-info-wrap{
+	
+	border: 1px solid #a9a9a9;
+	height: 140px; 
+	padding: 10px;
+}
+
+.user-wrap .user-span-wrap{
+	display: flex;
+	justify-content: space-between;
+}
+
+.user-wrap .user-list-wrap{
+	border: 1px solid #a9a9a9;
+	padding: 5px;
+	margin-top: 10px;
+	height: 90px;
+	overflow-y: scroll;
+}
+
+.user-wrap .user-list-wrap .users-nick{
+	display: block;
+}
+
+/* 나가기 */
+.user-wrap #byebye{
+	font-size: 13px;
+	padding: 5px 8px;
+	background-color: #a9a9a9;
+	margin-right: 10px;
+}
+
+.user-wrap .out-wrap{
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+
+/* 2-4. 채팅메뉴 */
+.chat-wrap{
+	height: 250px;
+}
+
+.chat-board{
+	border: 1px solid #a9a9a9;
+	height: 193px;
+	margin: 10px 0;
+	overflow-y: scroll;
+}
+
+.chat-btn-wrap{
+	height: 30px;
+	width: 280px;
+	margin: 0 !important;
+	display: flex;
+}
+
+.chat-btn-wrap input{
+	width: 200px;
+	height: 23px;
+}
+
+.chat-btn-wrap button{
+	height: 27px;
+	width: 46px;
+	margin-left: 10px;
+	padding: 0;
+}
+
+
+
+
