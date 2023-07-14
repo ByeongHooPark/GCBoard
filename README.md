@@ -1,7 +1,7 @@
 # GCBoard
 
 
-<br/><br/>
+<br/><br/><br/><br/>
  
 # :zap: 프로젝트소개
 <br/>
@@ -13,10 +13,7 @@
 <img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/5c5c8b5c-474e-44c1-bced-a87bafafda41"  width="300" height="300"/>
 <img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/d76193c1-d2a1-49e8-bb78-7d91d69a9509"  width="400" height="300"/>
 
-<br/>
-<br/>
-<br/>
-<br/>
+<br/><br/><br/><br/><br/><br/>
 
 ##  1. GPT 토론사이트
 
