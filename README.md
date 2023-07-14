@@ -14,6 +14,9 @@
 <img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/d76193c1-d2a1-49e8-bb78-7d91d69a9509"  width="400" height="300"/>
 
 <br/>
+<br/>
+<br/>
+<br/>
 
 ##  1. GPT 토론사이트
 
