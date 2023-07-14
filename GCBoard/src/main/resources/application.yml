@@ -1,35 +1,39 @@
 spring:
+  profiles:
+    active: dev 
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    password: 비밀번호
-    url: jdbc:mariadb://RDS주소:3306/project2
-    username: 아이디
-  mail:
-    host: smtp.gmail.com
-    password: 메일비밀번호
-    username: ddogi94@gmail.com
-    port: 465
-    properties:
-      mail:
-        smpt:
-          auth: true
-        smtp:
-          ssl:
-            enable: true
+    hikari:
+      max-lifetime: 177000 #177초 hikari는  wait_timeout  180 보다 2~3초 정도 짧게 줄것을 권장
+  servlet:
+    multipart:
+      max-file-size: 2MB
+            
+logging:
+  level:
+    com:
+      green:
+        nowon: debug
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
+          
+
+---
+#application-dev.yml 개발용
+spring:
+  config:
+    activate: 
+      on-profile: dev
+    import: optional:configserver:http://43.200.239.80:8888
     
-  jpa:
-    generate-ddl: true
-    open-in-view: false
-    show-sql: true
-
-  data:
-   redis:
-    host: 13.209.229.66
-    port: 6379
-
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-
-gpt:
-  key: GPT 키
+---
+#application-proc.yml 배포용
+spring:
+  config:
+    activate:
+      on-profile: proc
+    import: optional:configserver:http://localhost:8888
