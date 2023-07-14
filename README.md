@@ -99,6 +99,7 @@
 > #### 동기,비동기 로직 /chess/service/ChessServiceProcess.java
 
 <br/>
+<br/>
 
 > #### 체스판 기물들의 논리적 위치를 나타내는 game-room.js 전역변수
 ```
