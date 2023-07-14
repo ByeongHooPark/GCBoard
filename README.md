@@ -40,10 +40,12 @@
 <br/>
 
 #### 관련 코드  
-#### /service/ProjectServiceProcess 의 1,2,7,8,9 메서드 
-#### /service/ProjectServiceUtil 의 3,3.1 메서드 
+#### /service/ProjectServiceProcess 의 1, 2, 7, 8, 9번 메서드 
+#### /service/ProjectServiceUtil 의 3, 3.1번 메서드 
+
 <br/>
 <br/>
+
 ##  2. 체스 게시판
 <br/>
 
