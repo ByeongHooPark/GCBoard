@@ -63,16 +63,24 @@
 > #### /info/individual-info.html 의 'tier-wrap'클래스를 가진 div태그
 
 <br/>
-
 <br/>
-
 <br/>
 
 ##  2. 체스 게시판
 
 <br/>
 
+### :penguin: 웹소켓과 비동기 통신을 이용한 
 
+<br/>
+<br/>
+
+<img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/d76193c1-d2a1-49e8-bb78-7d91d69a9509"  width="400" height="300"/>
+
+<br/>
+<br/>
+
+#### 입출력 방식은 Chat GPT와 같습니다. 그런데 저의 어플리케이션에서는 G
 
 <br/>
 
