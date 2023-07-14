@@ -40,14 +40,30 @@
 <br/>
 
 #### 관련 코드  
-#### /service/ProjectServiceProcess 의 1, 2, 7, 8, 9번 메서드 
-#### /service/ProjectServiceUtil 의 3, 3.1번 메서드 
+#### /service/ProjectServiceProcess.java 의 1, 2, 7, 8, 9번 메서드 
+#### /service/ProjectServiceUtil.java 의 3, 3.1번 메서드 
 
 <br/>
 <br/>
+
+### :penguin: 점수와 참여 횟수에 따른 권한부여
+#### 유저들은 토론을 하며 GPT에게 점수를 부여받습니다. 평균점수와 토론 참여 횟수를 바탕으로 5가지 등급의 권한이 부여가 되며, 이는 개인정보 페이지에서 확인할 수 있습니다. 낮은 등급의 유저가 등급이 오를때마다 특정한 문구가 하나씩 보이게 됩니다.
+
+<br/>
+
+#### 관련 코드  
+#### /service/ProjectServiceUtil.java 의 3.2번 메서드
+#### /info/individual-info.html 의 'tier-wrap'클래스를 가진 div태그
+
+<br/>
+<br/>
+
+
 
 ##  2. 체스 게시판
+
 <br/>
+
 
 
 <br/><br/>
