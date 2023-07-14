@@ -7,6 +7,8 @@
 <br/>
 
 ### GCBoard는 Gpt Board + Chess Board 라는 뜻으로 독립적인 두 어플리케이션인 'Gpt 토론사이트'와 '체스게시판'으로 구성된 프로젝트 입니다.
+![스크린샷(136)](https://github.com/ByeongHooPark/GCBoard/assets/123047580/d358e377-8beb-4452-98f9-ce0bdc73a4c8)
+![스크린샷(137)](https://github.com/ByeongHooPark/GCBoard/assets/123047580/a48e1c6b-fbc0-4300-afde-60e8f68667a8)
 
 <br/><br/>
 
