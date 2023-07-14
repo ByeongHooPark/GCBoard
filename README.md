@@ -63,7 +63,9 @@
 > #### /info/individual-info.html 의 'tier-wrap'클래스를 가진 div태그
 
 <br/>
+
 <br/>
+
 <br/>
 
 ##  2. 체스 게시판
@@ -72,7 +74,9 @@
 
 
 
-<br/><br/>
+<br/>
+
+<br/>
 
 
 
