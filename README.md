@@ -75,7 +75,7 @@
 <br/>
 <br/>
 
-<img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/d76193c1-d2a1-49e8-bb78-7d91d69a9509"  width="400" height="300"/>
+<img src="https://github.com/ByeongHooPark/GCBoard/assets/123047580/dfb08f5d-9418-4459-a7cc-05928d2c4d46"  width="400" height="300"/>
 
 <br/>
 <br/>
