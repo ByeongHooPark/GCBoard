@@ -43,8 +43,7 @@ public class ProjectServiceProcess implements ProjectService {
 	private final ProjectServiceUtil psUtil;
 	
 	
-	/* 토론 주제 만들기(+토론 주장 만들기) */
-	/* 토론 */
+	/* 1. 토론 주제 입력(+토론 주장 입력) */
 	@Override
 	public String argueNewSubject(CreateArgueDTO dto, Principal principal) {
 		//1. 토론 주제 저장
@@ -90,7 +89,7 @@ public class ProjectServiceProcess implements ProjectService {
 		
 	}
 	
-	/* 새로운 주장 등록하기 */
+	/* 2. 새로운 주장 등록하기 */
 	@Override
 	public String createArgueContent(CreateACDTO dto, Principal principal) {
 		//1. 닉네임 처리(dto.getNick()의 유무)
@@ -151,7 +150,7 @@ public class ProjectServiceProcess implements ProjectService {
 	}
 	
 	
-	/* 토론 메인페이지의 리스트 가져오기 */
+	/* 3. 토론 메인페이지의 리스트 가져오기 */
 	@Override
 	public void mainArgueList(Model model) {
 		
@@ -169,7 +168,7 @@ public class ProjectServiceProcess implements ProjectService {
 		model.addAttribute("list", listDTO);
 	}
 	
-	/* 토론 주제로 가기 + 토론 내용들 뿌리기 */
+	/* 4. 토론 주제로 가기 + 토론 내용들 뿌리기 */
 	@Override
 	public void goArgueBoard(long abno, Model model, Principal principal) {
 		//모델 2개에 담기.
@@ -237,7 +236,7 @@ public class ProjectServiceProcess implements ProjectService {
 		model.addAttribute("clist", cDtoList);
 	}
 
-	/* 주장 상세 페이지 */
+	/* 5. 주장 상세 페이지 */
 	@Override
 	public void goArgueContent(long acno, Model model) {
 		//가져올 목록
@@ -275,7 +274,7 @@ public class ProjectServiceProcess implements ProjectService {
 	}
 	
 	
-	/* 개인정보로 가기 */
+	/* 6. 개인정보로 가기 */
 	@Override
 	public void goInfo(Model model, Principal principal) {
 		
@@ -289,7 +288,7 @@ public class ProjectServiceProcess implements ProjectService {
 	}
 
 	
-	/* gpt 채점 페이지(토론주장 등록한 뒤에만 가게되는 페이지) */
+	/* 7. gpt 채점 페이지(토론주장 등록한 뒤에만 가게되는 페이지) */
 	@Override
 	public void gptScore(long acno, Model model) {
 		
@@ -304,7 +303,7 @@ public class ProjectServiceProcess implements ProjectService {
 	}
 	
 	
-	/* 랜덤 토론 주제 만들기 : 토론 주제 등록 페이지 */
+	/* 8. 랜덤 토론 주제 만들기 : 토론 주제 등록 페이지 */
 	@Override
 	public ResponseEntity<Map<String, String>> getRandomData() {
 		
@@ -325,7 +324,7 @@ public class ProjectServiceProcess implements ProjectService {
 	
 	
 	
-	/* 새로운 주장 생성 페이지로 이동하기*/
+	/* 9 새로운 주장 생성 페이지로 이동하기*/
 	@Override
 	public void goWriteArgueContent(String abno, String parent, String type, Model model, Principal principal) {
 		//가져갈것
@@ -366,4 +365,3 @@ public class ProjectServiceProcess implements ProjectService {
 
 
 }
-
