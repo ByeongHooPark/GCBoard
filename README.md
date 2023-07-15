@@ -36,7 +36,7 @@
 # :zap: 주요 기능설명
 <br/>
 
-:turtle: 체스 게시판의 코드는 각 java, html, css, js 디렉토라 안의 chess 디렉토리 안에 모아두었습니다. 그 외의 코드들은 공통 코드와 GPT토론사이트의 코드들입니다.
+:turtle: ps. 체스 게시판의 코드는 각 java, html, css, js 디렉토라 안의 chess 디렉토리 안에 모아두었습니다. 그 외의 코드들은 공통 코드와 GPT토론사이트의 코드들입니다.
 
 <br/><br/>
 
@@ -50,7 +50,11 @@
 
 > #### 관련 코드  
 > #### /service/ProjectServiceProcess.java 의 1, 2, 7, 8, 9번 메서드 
-> #### /service/ProjectServiceUtil.java 의 3, 3.1번 메서드 
+> #### /service/ProjectServiceUtil.java 의 3, 3.1번 메서드
+
+<br/>
+
+> #### ps. 프로젝트에서 로그인하시고 왼쪽의 'G'문자를 누르시면 gpt토론사이트로 이동합니다.
 
 <br/>
 <br/>
@@ -63,6 +67,10 @@
 > #### 관련 코드  
 > #### /service/ProjectServiceUtil.java 의 3.2번 메서드
 > #### /info/individual-info.html 의 'tier-wrap'클래스를 가진 div태그
+
+<br/>
+
+> #### ps. 로그인하시고 상단 레이아웃의 개인정보에 들어가시면 확인하실 수 있습니다.
 
 <br/>
 <br/>
@@ -99,6 +107,10 @@
 >
 > #### 웹소켓로직 /chess/controllor/WebSocketControllerjava
 > #### 동기,비동기 로직 /chess/service/ChessServiceProcess.java
+
+<br/>
+
+> #### ps. 로그인 없이 메인화면 오른쪽 'C'를 누르시면 들어가집니다. 방을 만드시고 각각 다른 창으로(같은 브라우저 다른 창도 가능) 들어가시면 시연 가능하십니다.
 
 <br/>
 <br/>
