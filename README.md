@@ -11,7 +11,7 @@
 
 ### Java, Spring boot, JPA, MariaDB, RDS, Spring Security
 ### EC2, Spring Cloud
-### Redis, WebSocket
+### Redis, WebSocket, GPT Api
 ### HTML, CSS, JavaScrpt, Thymeleaf, jquery
 
 <br/><br/><br/><br/>
