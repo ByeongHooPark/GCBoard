@@ -9,10 +9,10 @@
 
 <br/>
 
-#### Java, Spring boot, JPA, MariaDB, RDS, Spring Security
-#### EC2, Spring Cloud
-#### Redis, WebSocket
-#### HTML, CSS, JavaScrpt, Thymeleaf, jquery
+### Java, Spring boot, JPA, MariaDB, RDS, Spring Security
+### EC2, Spring Cloud
+### Redis, WebSocket
+### HTML, CSS, JavaScrpt, Thymeleaf, jquery
 
 <br/><br/><br/><br/>
  
