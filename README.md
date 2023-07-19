@@ -4,6 +4,17 @@
 #### :point_right: 다이아계정(d123/123) 플레티넘계정(p123/123) 골드계정(g123/123) 실버계정(s123/123) 브론즈계정(b123/123)
 
 <br/><br/><br/><br/>
+
+# :zap: 사용기술
+
+<br/>
+
+#### Java, Spring boot, JPA, MariaDB, RDS, Spring Security
+#### EC2, Spring Cloud
+#### Redis, WebSocket
+#### HTML, CSS, JavaScrpt, Thymeleaf, jquery
+
+<br/><br/><br/><br/>
  
 # :zap: 프로젝트소개
 <br/>
@@ -128,10 +139,6 @@
 	["R", "N", "B", "Q", "K", "B", "N", "R"]
 ];
 ```
-
-
-
-
 
 
 
